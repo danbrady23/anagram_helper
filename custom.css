@@ -38,6 +38,6 @@ ul#letters li.word-break {
     margin-right: 15px;
 }
 
-#clearFixed {
-    display: none;
+.hidden {
+    display:none;
 }

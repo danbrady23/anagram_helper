@@ -94,11 +94,11 @@ function clearButtAction() {
 }
 
 function showElement(el) {
-    el.style = "display:block;"
+    el.classList.remove("hidden")
 }
 
 function hideElement(el) {
-    el.style = "display:none;"
+    el.classList.add("hidden")
 }
 
 function setButtAction() {

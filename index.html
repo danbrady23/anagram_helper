@@ -1,37 +1,32 @@
  <!DOCTYPE html>
  <html data-theme="light">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
     <link rel="stylesheet" href="custom.css">
     <script src="anagram.js" defer></script>
   </head>
   <body>
     <div class="container">
-      <div class="flex five">
-        <div class="off-two-fifth">
+      <div class="flex one center">
+        <div class="four-fifth two-third-600 fourth-1000">
           <label for="answer">Answer Length</label>
-          <input type="text" id="answer" placeholder="Answer Length" onblur="updateAnsLen()">
+          <input type="text" id="answer" placeholder="Answer Length" onblur="updateAnsLen()" autocomplete="off">
           <label for="anagram">Anagram</label>
-          <input type="text" id="anagram" placeholder="Clue text" oninput="updateClueLen()" onkeydown="anagramEnter(event)" onblur="updateClueLen()" maxlength=0>
+          <input type="text" id="anagram" placeholder="Clue text" oninput="updateClueLen()" onkeydown="anagramEnter(event)" onblur="updateClueLen()" maxlength=0 autocomplete="off">
           <span id="clue-len">0</span>/<span id="ans-len">0</span>
           <div>
             <button id="ana-set" onclick="setButtAction()">Set</button>
             <button id="ana-clear" onclick="clearButtAction()">Clear</button>
           </div>
-        </div>
-      </div>
-      
-      <div class="flex five center">
-        <div class="three-fifth">
-          <ul id="letters">
-          </ul>
-        </div>
-      </div>
-
-      <div id="shuffButt" class="flex five" style="display:none;">
-        <div class="off-two-fifth">
-          <button id="shuffle" onclick="shuffleLetters()">Shuffle</button>
-          <button id="clearFixed" onclick="clearFixed()">Clear fixed</button>
+          <div>
+            <ul id="letters">
+            </ul>
+          </div>
+          <div id="shuffButt" class="hidden">
+            <button id="shuffle" onclick="shuffleLetters()">Shuffle</button>
+            <button id="clearFixed" class="hidden" onclick="clearFixed()">Clear fixed</button>
+          </div>
         </div>
       </div>
     </div>
