@@ -1,0 +1,43 @@
+ul#letters {
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+    font-size: 30px;
+    text-transform: capitalize;
+    justify-content: center;
+}
+
+ul#letters li {
+    padding: 5px;
+    border: solid 1px black;
+    margin-inline: 2px;
+    font-family: monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 15%;
+    background-color: wheat;
+    cursor: default;
+}
+
+ul#letters li.word-end {
+    margin-right: 20px;
+}
+
+ul#letters li.fixed {
+    background-color: lightblue;
+}
+
+ul#letters li:hover {
+    border: solid 2px black;
+}
+
+ul#letters li.word-break {
+    margin-right: 15px;
+}
+
+#clearFixed {
+    display: none;
+}

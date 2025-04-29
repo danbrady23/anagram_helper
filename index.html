@@ -1,0 +1,48 @@
+ <!DOCTYPE html>
+ <html data-theme="light">
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+    <link rel="stylesheet" href="custom.css">
+    <script src="anagram.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="flex five">
+        <div class="off-two-fifth">
+          <label for="answer">Answer Length</label>
+          <input type="text" id="answer" placeholder="Answer Length" onblur="updateAnsLen()">
+          <label for="anagram">Anagram</label>
+          <input type="text" id="anagram" placeholder="Clue text" oninput="updateClueLen()" onkeydown="anagramEnter(event)" onblur="updateClueLen()" maxlength=0>
+          <span id="clue-len">0</span>/<span id="ans-len">0</span>
+          <div>
+            <button id="ana-set" onclick="setButtAction()">Set</button>
+            <button id="ana-clear" onclick="clearButtAction()">Clear</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="flex five center">
+        <div class="three-fifth">
+          <ul id="letters">
+          </ul>
+        </div>
+      </div>
+
+      <div id="shuffButt" class="flex five" style="display:none;">
+        <div class="off-two-fifth">
+          <button id="shuffle" onclick="shuffleLetters()">Shuffle</button>
+          <button id="clearFixed" onclick="clearFixed()">Clear fixed</button>
+        </div>
+      </div>
+    </div>
+
+
+    <script>
+      let letterContainer = document.getElementById("letters")
+      let anagramInput = document.getElementById("anagram")
+      let answerInput = document.getElementById("answer")
+      let shuffButt = document.getElementById("shuffButt")
+    </script>
+
+  </body>
+</html>
