@@ -35,7 +35,7 @@ function freezeItem(event) {
         target.classList.remove("fixed")
     } else {
         fixed.push(selectedTile)
-        fixed.sort()
+        fixed.sort((a, b) => a - b)
         target.classList.add("fixed")
     }
 
